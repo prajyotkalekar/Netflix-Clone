@@ -19,7 +19,8 @@ def login(request):
         else:
             messages.info(request, 'Credentials Invalid')
             return redirect('login')
-    return render(request, 'login.html')
+    else:
+        return render(request, 'login.html')
 
 def signup(request):
     if request.method == "POST":

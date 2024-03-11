@@ -33,7 +33,7 @@ body, html {
     top: 50%;
     transform: translateY(-50%);
     padding: 60px 68px 40px;
-    background-color: rgba(182, 12, 12, 0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
     box-sizing: border-box;
 }
@@ -70,7 +70,7 @@ body, html {
 }
 
 .signup-container .signup-btn:hover {
-    background: #55f406;
+    background: #f40612;
 }
 
 .signup-container .help-text {
