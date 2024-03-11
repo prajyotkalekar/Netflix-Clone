@@ -74,10 +74,16 @@ WSGI_APPLICATION = 'netflix_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
+# Postgres db
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'netflix-db',
+        'USER': 'fl0user',
+        'PASSWORD': '8guvKaRxT2qt',
+        'HOST': 'ep-bold-feather-a1d4k7ap.ap-southeast-1.aws.neon.fl0.io',
+        'PORT': '5432',
     }
 }
 
@@ -97,7 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    },  
 ]
 
 
