@@ -8,4 +8,11 @@ def login(request):
     return render(request, 'login.html')
 
 def signup(request):
-    return render(request, 'signup.html')
+    if request.method == "POST":
+        # collect all details sent
+        email = request.POST['email']
+        username = request.POST['username']
+        password = request.POST['password']
+        password2 = request.POST['password2']
+    else:
+        return render(request, 'signup.html')
