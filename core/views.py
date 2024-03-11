@@ -2,8 +2,21 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from .models import Movie
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required(login_url='login')
+
+def movie(request, id):
+    movie_uuid = id
+    movie_details = Movie.objects.get(uu_id=movie_uuid)
+
+    context = {
+        'movie_details':movie_details
+    }
+
+    return render(request, 'movie.html', context)
+
 def index(request):
     movies = Movie.objects.all()
     context = {
